@@ -18,6 +18,7 @@ config/icon="res://Scenes/icon.svg"
 [autoload]
 
 SingleGameManager="*res://SingleGameManager.gd"
+Ui="*res://Scenes/ui.tscn"
 
 [display]
 

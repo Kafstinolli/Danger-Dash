@@ -20,6 +20,8 @@ var conta = 0
 var maxim = 460
 var steps = 40
 
+func _ready():
+	jump_label = get_node("/root/Ui/Sprite2D/JumpLabel")
 # Se ejecuta en cada frame de física (control principal del personaje).
 func _physics_process(delta: float) -> void:
 	

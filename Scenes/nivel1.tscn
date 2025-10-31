@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dcjns03ahu8q8"]
+[gd_scene load_steps=12 format=3 uid="uid://dcjns03ahu8q8"]
 
 [ext_resource type="PackedScene" uid="uid://bvwpry7pgqx77" path="res://Scenes/character_body_2d.tscn" id="1_tvmah"]
 [ext_resource type="Script" uid="uid://bqgiyonhyyvs4" path="res://Scenes/character_body_2d.gd" id="2_x8yyg"]
@@ -7,12 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dh1hw7aq6joy0" path="res://Scenes/collectible.tscn" id="5_j1oeo"]
 [ext_resource type="PackedScene" uid="uid://cqoh7m8wt601u" path="res://Scenes/nivel2.tscn" id="6_x8yyg"]
 [ext_resource type="PackedScene" uid="uid://b0t8iurlm5y6k" path="res://Scenes/trophy.tscn" id="6_y2dbi"]
-[ext_resource type="Texture2D" uid="uid://dtd8skeg2p01r" path="res://Assets/Cherries.png" id="7_iy3eh"]
-[ext_resource type="Texture2D" uid="uid://dd1bm7futt668" path="res://Assets/krita.png" id="8_mhdob"]
-[ext_resource type="Texture2D" uid="uid://cljp1dpjkjpn5" path="res://Assets/Sprites/Jump.png" id="9_hcf7f"]
-[ext_resource type="Texture2D" uid="uid://brfaa7mtjvpan" path="res://Assets/Gradient.png" id="11_qbrr2"]
-[ext_resource type="Texture2D" uid="uid://dtupmd4tnlc2w" path="res://Assets/Marco.png" id="12_3pkkb"]
-[ext_resource type="Texture2D" uid="uid://dmdpueikaskj4" path="res://Assets/Jumps.png" id="12_hcf7f"]
+[ext_resource type="PackedScene" uid="uid://du0av804qnkvi" path="res://Scenes/ui.tscn" id="7_iy3eh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
 texture = ExtResource("4_p8b2h")
@@ -195,133 +190,6 @@ texture = ExtResource("4_p8b2h")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_7mycd")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_p8b2h"]
-atlas = ExtResource("7_iy3eh")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_j1oeo"]
-atlas = ExtResource("7_iy3eh")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_y2dbi"]
-atlas = ExtResource("7_iy3eh")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mhdob"]
-atlas = ExtResource("7_iy3eh")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hcf7f"]
-atlas = ExtResource("7_iy3eh")
-region = Rect2(128, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3vjri"]
-atlas = ExtResource("7_iy3eh")
-region = Rect2(160, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ue8p2"]
-atlas = ExtResource("7_iy3eh")
-region = Rect2(192, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qbrr2"]
-atlas = ExtResource("7_iy3eh")
-region = Rect2(224, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3pkkb"]
-atlas = ExtResource("7_iy3eh")
-region = Rect2(256, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_m0rvo"]
-atlas = ExtResource("7_iy3eh")
-region = Rect2(288, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_c87ai"]
-atlas = ExtResource("7_iy3eh")
-region = Rect2(320, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_a1rmy"]
-atlas = ExtResource("7_iy3eh")
-region = Rect2(352, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s5ag1"]
-atlas = ExtResource("7_iy3eh")
-region = Rect2(384, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_a3pjr"]
-atlas = ExtResource("7_iy3eh")
-region = Rect2(416, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bqwh3"]
-atlas = ExtResource("7_iy3eh")
-region = Rect2(448, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2ovf6"]
-atlas = ExtResource("7_iy3eh")
-region = Rect2(480, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_37y0m"]
-atlas = ExtResource("7_iy3eh")
-region = Rect2(512, 0, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ro156"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p8b2h")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_j1oeo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_y2dbi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mhdob")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hcf7f")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3vjri")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ue8p2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qbrr2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3pkkb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_m0rvo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_c87ai")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_a1rmy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_s5ag1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_a3pjr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bqwh3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2ovf6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_37y0m")
-}],
-"loop": true,
-"name": &"cherries",
-"speed": 20.0
-}]
-
 [sub_resource type="GDScript" id="GDScript_y2dbi"]
 script/source = "extends Node2D
 @onready var points_label: Label = %PointsLabel
@@ -384,80 +252,7 @@ wait_time = 0.01
 position = Vector2(9776, -904)
 target_level = ExtResource("6_x8yyg")
 
-[node name="UI" type="CanvasLayer" parent="."]
-
-[node name="Panel" type="Panel" parent="UI"]
-offset_right = 152.0
-offset_bottom = 48.0
-
-[node name="PointsLabel" type="Label" parent="UI/Panel"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_bottom = 2.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 30
-text = "0
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="UI/Panel"]
-texture_filter = 1
-position = Vector2(40, 24)
-scale = Vector2(3, 2.625)
-sprite_frames = SubResource("SpriteFrames_ro156")
-animation = &"cherries"
-autoplay = "cherries"
-frame = 10
-
-[node name="TextureRect" type="TextureRect" parent="UI"]
-offset_left = 2.0
-offset_top = 504.0
-offset_right = 2.0
-offset_bottom = 504.0
-
-[node name="TextureRect" type="TextureRect" parent="UI/TextureRect"]
-layout_mode = 0
-offset_top = 16.0
-offset_right = 134.0
-offset_bottom = 120.0
-texture = ExtResource("8_mhdob")
-expand_mode = 1
-
-[node name="Sprite2D" type="Sprite2D" parent="UI/TextureRect"]
-position = Vector2(70, 64)
-scale = Vector2(3.41992, 4.17188)
-texture = ExtResource("9_hcf7f")
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="UI/TextureRect"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 125.0
-offset_right = 375.0
-offset_bottom = 125.0
-max_value = 20.0
-value = 2.0
-texture_over = ExtResource("12_3pkkb")
-texture_progress = ExtResource("11_qbrr2")
-
-[node name="Sprite2D2" type="Sprite2D" parent="UI/TextureRect"]
-texture_filter = 1
-position = Vector2(1046, 96)
-scale = Vector2(1.41429, 1.41429)
-texture = ExtResource("12_hcf7f")
-
-[node name="JumpLabel" type="Label" parent="UI/TextureRect/Sprite2D2"]
-unique_name_in_owner = true
-offset_left = 24.0
-offset_top = -24.0
-offset_right = 50.0
-offset_bottom = 18.0
-theme_override_font_sizes/font_size = 30
-text = "0"
+[node name="UI" parent="." instance=ExtResource("7_iy3eh")]
 
 [node name="Collectibles" type="Node" parent="."]
 

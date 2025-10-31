@@ -1,11 +1,15 @@
 extends Node
 
+var points_label
+var texture_progress_bar
+var puntos = 0 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func _ready():
+	points_label = get_node("/root/Ui/Panel/PointsLabel")
+	texture_progress_bar = get_node("/root/Ui/TextureRect/TextureProgressBar")
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func add_puntos():
+	puntos += 1
+	points_label.text = str(puntos)
+	texture_progress_bar.value += 1
+	

@@ -1,9 +1,6 @@
 # Este script se usa para detectar cuando el personaje toca un área (por ejemplo, una moneda o ítem).
 extends Area2D
 
-# Referencia al nodo principal del juego (GameManager), que maneja la puntuación u otras variables globales.
-@onready var game_manager: Node2D = %GameManager
-
 # Referencia al texto donde se muestran los puntos (aunque aquí no se usa directamente).
 @onready var points_label: Label = %PointsLabel
 
@@ -11,5 +8,5 @@ extends Area2D
 func _on_body_entered(body: Node2D) -> void:
 	if (body.name == "CharacterBody2D"):
 		# Si el objeto que entra es el jugador:
-		game_manager.add_puntos() # Llama al método que suma puntos.
+		SingleGameManager.add_puntos() # Llama al método que suma puntos.
 		queue_free()  # Elimina este objeto de la escena (la cereza desaparece).
