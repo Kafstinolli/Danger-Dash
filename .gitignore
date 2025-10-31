@@ -1,0 +1,8 @@
+# Godot
+.import/
+.godot/
+*.import
+
+# Sistema operativo
+.DS_Store
+Thumbs.db

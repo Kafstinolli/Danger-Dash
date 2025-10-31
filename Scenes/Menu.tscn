@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccci1sqajp2aw"]
+
+[ext_resource type="Texture2D" uid="uid://ccp5hf8tw62ig" path="res://Assets/fondologo.jpg" id="1_6pedr"]
+[ext_resource type="Script" uid="uid://di7c5cnu4p6wp" path="res://Scenes/menu.gd" id="1_syfuq"]
+[ext_resource type="Texture2D" uid="uid://dktd584p8j3uc" path="res://Assets/Logo Danger  Dash 492707915047684.png" id="2_syfuq"]
+
+[node name="Menu" type="Node"]
+script = ExtResource("1_syfuq")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = -1
+anchor_left = 0.521
+anchor_top = 0.568
+anchor_right = 0.521
+anchor_bottom = 0.568
+offset_left = -808.192
+offset_top = -496.064
+offset_right = 1111.81
+offset_bottom = 388.936
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6pedr")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Logo" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.309
+anchor_right = 0.535
+anchor_bottom = 0.309
+offset_left = -376.0
+offset_top = -64.232
+offset_right = 343.68
+offset_bottom = 51.768
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_syfuq")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = -1
+anchor_right = 0.069
+anchor_bottom = 0.099
+offset_left = 256.0
+offset_top = 320.0
+offset_right = 432.512
+offset_bottom = 343.848
+theme_override_font_sizes/font_size = 50
+text = "Nivel 1"
+
+[node name="Button2" type="Button" parent="."]
+anchors_preset = -1
+anchor_right = 0.069
+anchor_bottom = 0.099
+offset_left = 640.0
+offset_top = 320.0
+offset_right = 816.512
+offset_bottom = 343.848
+theme_override_font_sizes/font_size = 50
+text = "Nivel 2"
+
+[connection signal="pressed" from="Button" to="." method="_on_nivel_1_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_nivel_2_pressed"]
