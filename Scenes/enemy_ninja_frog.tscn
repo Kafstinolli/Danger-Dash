@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://dg2hqvpgn7kri"]
+
+[node name="EnemyNinjaFrog" type="CharacterBody2D"]

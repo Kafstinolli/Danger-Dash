@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://du0av804qnkvi"]
+[gd_scene load_steps=28 format=3 uid="uid://du0av804qnkvi"]
 
 [ext_resource type="Texture2D" uid="uid://dtd8skeg2p01r" path="res://Assets/Cherries.png" id="1_m78vo"]
 [ext_resource type="Texture2D" uid="uid://dd1bm7futt668" path="res://Assets/krita.png" id="2_smcll"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dmdpueikaskj4" path="res://Assets/Jumps.png" id="6_g0wmg"]
 [ext_resource type="AudioStream" uid="uid://77tu2jx431nx" path="res://Audio/fondo.mp3" id="7_ryf15"]
 [ext_resource type="AudioStream" uid="uid://dvdg2jo2ff853" path="res://Audio/Coin.wav" id="8_mmixe"]
+[ext_resource type="Script" uid="uid://c2r32w8021qsi" path="res://Scenes/spawnear.gd" id="9_mmixe"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p8b2h"]
 atlas = ExtResource("1_m78vo")
@@ -217,3 +218,10 @@ autoplay = true
 
 [node name="CoinSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_mmixe")
+
+[node name="Spawnear" type="Node2D" parent="."]
+script = ExtResource("9_mmixe")
+
+[node name="Timer" type="Timer" parent="Spawnear"]
+wait_time = 3.0
+autostart = true
