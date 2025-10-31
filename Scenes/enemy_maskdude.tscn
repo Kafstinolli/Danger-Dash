@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://b6rupwlyadbbn"]
+
+[ext_resource type="Script" uid="uid://bxfxqnt6elly7" path="res://Scenes/EnemyNinjaFrog.gd" id="1_4uedr"]
+[ext_resource type="Texture2D" uid="uid://bdmnwu515q7hn" path="res://Assets/Mask Dude/Fall (32x32).png" id="2_4uedr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2h0x"]
+atlas = ExtResource("2_4uedr")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g7k1w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u2h0x")
+}],
+"loop": true,
+"name": &"Fall",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1cau7"]
+size = Vector2(37, 47)
+
+[node name="EnemyNinjaFrog" type="CharacterBody2D"]
+script = ExtResource("1_4uedr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0.75, 1.5)
+scale = Vector2(1.76563, 1.96875)
+sprite_frames = SubResource("SpriteFrames_g7k1w")
+animation = &"Fall"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 4.5)
+shape = SubResource("RectangleShape2D_1cau7")
+
+[node name="Left" type="RayCast2D" parent="."]
+target_position = Vector2(-50, 0)
+collision_mask = 4
+
+[node name="Right" type="RayCast2D" parent="."]
+target_position = Vector2(44, 0)
+collision_mask = 4
