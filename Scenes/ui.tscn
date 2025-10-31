@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://du0av804qnkvi"]
+[gd_scene load_steps=27 format=3 uid="uid://du0av804qnkvi"]
 
 [ext_resource type="Texture2D" uid="uid://dtd8skeg2p01r" path="res://Assets/Cherries.png" id="1_m78vo"]
 [ext_resource type="Texture2D" uid="uid://dd1bm7futt668" path="res://Assets/krita.png" id="2_smcll"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dtupmd4tnlc2w" path="res://Assets/Marco.png" id="4_mmixe"]
 [ext_resource type="Texture2D" uid="uid://brfaa7mtjvpan" path="res://Assets/Gradient.png" id="5_nt8jn"]
 [ext_resource type="Texture2D" uid="uid://dmdpueikaskj4" path="res://Assets/Jumps.png" id="6_g0wmg"]
+[ext_resource type="AudioStream" uid="uid://77tu2jx431nx" path="res://Audio/fondo.mp3" id="7_ryf15"]
+[ext_resource type="AudioStream" uid="uid://dvdg2jo2ff853" path="res://Audio/Coin.wav" id="8_mmixe"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p8b2h"]
 atlas = ExtResource("1_m78vo")
@@ -208,3 +210,10 @@ offset_right = 50.0
 offset_bottom = 18.0
 theme_override_font_sizes/font_size = 30
 text = "0"
+
+[node name="GameAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_ryf15")
+autoplay = true
+
+[node name="CoinSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_mmixe")
