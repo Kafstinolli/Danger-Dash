@@ -10,7 +10,7 @@ func _ready():
 
 # Esta función se ejecuta cuando otro cuerpo (body) entra en el área.
 func _on_body_entered(body: Node2D) -> void:
-	if body.name == "CharacterBody2D":
+	
 		SingleGameManager.add_puntos()  # Llama al método que suma puntos.
 		coin_sound.playing = true
 		

@@ -160,6 +160,8 @@ animations = [{
 size = Vector2(42, 63.6182)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 29
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 1

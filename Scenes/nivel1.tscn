@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dcjns03ahu8q8"]
+[gd_scene load_steps=15 format=3 uid="uid://dcjns03ahu8q8"]
 
 [ext_resource type="PackedScene" uid="uid://bvwpry7pgqx77" path="res://Scenes/character_body_2d.tscn" id="1_tvmah"]
 [ext_resource type="Script" uid="uid://bqgiyonhyyvs4" path="res://Scenes/character_body_2d.gd" id="2_x8yyg"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://du0av804qnkvi" path="res://Scenes/ui.tscn" id="7_iy3eh"]
 [ext_resource type="Script" uid="uid://c2r32w8021qsi" path="res://Scenes/spawnear.gd" id="9_p8b2h"]
 [ext_resource type="PackedScene" uid="uid://dg2hqvpgn7kri" path="res://Scenes/enemy_ninja_frog.tscn" id="10_j1oeo"]
+[ext_resource type="PackedScene" uid="uid://b6ungjsd51crj" path="res://Scenes/enemy_mask_dude.tscn" id="11_y2dbi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
 texture = ExtResource("4_p8b2h")
@@ -373,7 +374,10 @@ wait_time = 3.0
 autostart = true
 
 [node name="EnemyNinjaFrog" parent="." instance=ExtResource("10_j1oeo")]
-position = Vector2(526, 548)
+position = Vector2(383, 545)
+
+[node name="EnemyMaskDude" parent="." instance=ExtResource("11_y2dbi")]
+position = Vector2(27, 208)
 
 [connection signal="timeout" from="CharacterBody2D/CamTimer" to="CharacterBody2D" method="_on_cam_timer_timeout"]
 [connection signal="timeout" from="Spawnear/Timer" to="Spawnear" method="_on_timer_timeout"]

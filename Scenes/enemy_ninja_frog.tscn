@@ -1,7 +1,35 @@
 [gd_scene load_steps=17 format=3 uid="uid://dg2hqvpgn7kri"]
 
-[ext_resource type="Script" uid="uid://bxfxqnt6elly7" path="res://Scenes/EnemyNinjaFrog.gd" id="1_joj25"]
 [ext_resource type="Texture2D" uid="uid://bxfpkeh7e87lc" path="res://Assets/Ninja Frog/Run (32x32).png" id="1_ovt5n"]
+
+[sub_resource type="GDScript" id="GDScript_uv0qp"]
+script/source = "extends CharacterBody2D
+
+const Speed = 100.0	
+const Gravity = 980
+
+func _ready():
+	velocity.x = Speed
+	$AnimatedSprite2D.play(\"Run\")
+	
+func _next_to_left_wall():
+	return $Left.is_colliding()
+
+func _next_to_right_wall():
+	return $Right.is_colliding()
+	
+func flip():
+	if _next_to_left_wall() or _next_to_right_wall():
+		velocity.x*=-1
+		$AnimatedSprite2D.scale.x *=-1
+
+func _physics_process(delta):
+	velocity.y += Gravity
+	flip()
+	move_and_slide()
+
+	
+"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_joj25"]
 atlas = ExtResource("1_ovt5n")
@@ -99,7 +127,9 @@ animations = [{
 size = Vector2(37, 47)
 
 [node name="EnemyNinjaFrog" type="CharacterBody2D"]
-script = ExtResource("1_joj25")
+collision_layer = 8
+collision_mask = 7
+script = SubResource("GDScript_uv0qp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
