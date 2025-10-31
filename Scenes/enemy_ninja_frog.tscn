@@ -1,5 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://dg2hqvpgn7kri"]
+[gd_scene load_steps=17 format=3 uid="uid://dg2hqvpgn7kri"]
 
+[ext_resource type="Script" uid="uid://bxfxqnt6elly7" path="res://Scenes/EnemyNinjaFrog.gd" id="1_joj25"]
 [ext_resource type="Texture2D" uid="uid://bxfpkeh7e87lc" path="res://Assets/Ninja Frog/Run (32x32).png" id="1_ovt5n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_joj25"]
@@ -94,7 +95,11 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1cau7"]
+size = Vector2(37, 47)
+
 [node name="EnemyNinjaFrog" type="CharacterBody2D"]
+script = ExtResource("1_joj25")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -102,3 +107,15 @@ position = Vector2(0.75, 1.5)
 scale = Vector2(1.76563, 1.96875)
 sprite_frames = SubResource("SpriteFrames_g7k1w")
 animation = &"Run"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 4.5)
+shape = SubResource("RectangleShape2D_1cau7")
+
+[node name="Left" type="RayCast2D" parent="."]
+target_position = Vector2(-50, 0)
+collision_mask = 4
+
+[node name="Right" type="RayCast2D" parent="."]
+target_position = Vector2(44, 0)
+collision_mask = 4

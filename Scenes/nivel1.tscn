@@ -189,7 +189,8 @@ texture = ExtResource("4_p8b2h")
 20:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_272bh"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 5
+physics_layer_0/collision_mask = 5
 sources/0 = SubResource("TileSetAtlasSource_7mycd")
 
 [sub_resource type="GDScript" id="GDScript_y2dbi"]
@@ -372,6 +373,7 @@ wait_time = 3.0
 autostart = true
 
 [node name="EnemyNinjaFrog" parent="." instance=ExtResource("10_j1oeo")]
+position = Vector2(526, 548)
 
 [connection signal="timeout" from="CharacterBody2D/CamTimer" to="CharacterBody2D" method="_on_cam_timer_timeout"]
 [connection signal="timeout" from="Spawnear/Timer" to="Spawnear" method="_on_timer_timeout"]
