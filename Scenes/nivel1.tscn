@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dcjns03ahu8q8"]
+[gd_scene load_steps=13 format=3 uid="uid://dcjns03ahu8q8"]
 
 [ext_resource type="PackedScene" uid="uid://bvwpry7pgqx77" path="res://Scenes/character_body_2d.tscn" id="1_tvmah"]
 [ext_resource type="Script" uid="uid://bqgiyonhyyvs4" path="res://Scenes/character_body_2d.gd" id="2_x8yyg"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cqoh7m8wt601u" path="res://Scenes/nivel2.tscn" id="6_x8yyg"]
 [ext_resource type="PackedScene" uid="uid://b0t8iurlm5y6k" path="res://Scenes/trophy.tscn" id="6_y2dbi"]
 [ext_resource type="PackedScene" uid="uid://du0av804qnkvi" path="res://Scenes/ui.tscn" id="7_iy3eh"]
+[ext_resource type="Script" uid="uid://c2r32w8021qsi" path="res://Scenes/spawnear.gd" id="9_p8b2h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
 texture = ExtResource("4_p8b2h")
@@ -191,19 +192,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_7mycd")
 
 [sub_resource type="GDScript" id="GDScript_y2dbi"]
-script/source = "extends Node2D
-@onready var points_label: Label = %PointsLabel
-@onready var texture_progress_bar: TextureProgressBar = %TextureProgressBar
-
-var puntos = 0
-
-func add_puntos():
-	puntos += 1
-	print(puntos)
-	points_label.text = str(puntos)
-	texture_progress_bar.value += 1
-	
-"
 
 [node name="Node" type="Node"]
 
@@ -375,4 +363,12 @@ unique_name_in_owner = true
 position = Vector2(16, 8)
 script = SubResource("GDScript_y2dbi")
 
+[node name="Spawnear" type="Node2D" parent="."]
+script = ExtResource("9_p8b2h")
+
+[node name="Timer" type="Timer" parent="Spawnear"]
+wait_time = 3.0
+autostart = true
+
 [connection signal="timeout" from="CharacterBody2D/CamTimer" to="CharacterBody2D" method="_on_cam_timer_timeout"]
+[connection signal="timeout" from="Spawnear/Timer" to="Spawnear" method="_on_timer_timeout"]
