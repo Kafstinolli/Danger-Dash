@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://udc011cn1wis"]
+[gd_scene load_steps=6 format=3 uid="uid://bopt51qpiwohl"]
 
 [ext_resource type="Texture2D" uid="uid://dro11dghauxvf" path="res://Assets/Sprites/Backgrounds/Double/background_clouds.png" id="1_1boc4"]
 [ext_resource type="Texture2D" uid="uid://bm64uurovuo31" path="res://Assets/Sprites/Backgrounds/Double/background_fade_mushrooms.png" id="2_suadl"]
