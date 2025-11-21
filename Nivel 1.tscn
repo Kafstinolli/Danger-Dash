@@ -4445,7 +4445,7 @@ texture = ExtResource("3_oyj17")
 [sub_resource type="TileSet" id="TileSet_012ah"]
 sources/3 = SubResource("TileSetAtlasSource_3mvlh")
 
-[node name="Mapa1" type="Node"]
+[node name="Nivel1" type="Node"]
 
 [node name="Cielo" type="TextureRect" parent="."]
 texture_filter = 1
