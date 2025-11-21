@@ -1,3 +1,23 @@
-[gd_scene format=3 uid="uid://5lt10i7pgdgg"]
+[gd_scene load_steps=3 format=3 uid="uid://5lt10i7pgdgg"]
+
+[ext_resource type="Texture2D" uid="uid://dro11dghauxvf" path="res://Assets/Sprites/Backgrounds/Double/background_clouds.png" id="1_og30x"]
+[ext_resource type="Texture2D" uid="uid://ujpo5q4mvb5o" path="res://Assets/Sprites/Backgrounds/Double/background_color_trees.png" id="2_7xuih"]
 
 [node name="Nivel2" type="Node"]
+
+[node name="Cielo" type="TextureRect" parent="."]
+texture_filter = 1
+offset_top = -512.0
+offset_right = 8337.0
+texture = ExtResource("1_og30x")
+stretch_mode = 1
+
+[node name="Suelo" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 8335.0
+offset_bottom = 512.0
+texture = ExtResource("2_7xuih")
+stretch_mode = 1
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
