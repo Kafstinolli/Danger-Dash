@@ -7,6 +7,7 @@ const JUMP_VELOCITY := -600.0
 @onready var timer = $Timer
 @onready var cam: Camera2D = $Camera2D
 @onready var cam_timer: Timer = $CamTimer
+@onready var jump_label: Label = %JumpLabel
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -22,12 +23,13 @@ func _physics_process(delta: float) -> void:
 		CameraMove()
 		
 	if Input.is_action_just_pressed("zoomOut"):
-		if cam.zoom >= Vector2(0.5, 0.5):
-			cam.zoom -= Vector2(0.5, 0.5)
+		cam.zoom.x = clamp(cam.zoom.x - 0.2, 0.5, 2.0)
+		cam.zoom.y = clamp(cam.zoom.y - 0.2, 0.5, 2.0)
 
 	if Input.is_action_just_pressed("zoomIn"):
-		if cam.zoom <= Vector2(2, 2):
-			cam.zoom += Vector2(0.5, 0.5)
+		cam.zoom.x = clamp(cam.zoom.x + 0.2, 0.5, 2.0)
+		cam.zoom.y = clamp(cam.zoom.y + 0.2, 0.5, 2.0)
+
 
 	# Movimiento horizontal
 	var direction := Input.get_axis("left", "right")
@@ -42,10 +44,11 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
+	
 	# Saltar
 	if Input.is_action_just_pressed("jump") and (is_on_floor() or timer.time_left > 0.0):
 		velocity.y = JUMP_VELOCITY
-
+		jump_label.text = str(int(jump_label.text) + 1 )
 	# Animaciones
 	if not is_on_floor():
 		sprite_2d.animation = "Jump"
