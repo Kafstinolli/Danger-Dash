@@ -8915,4 +8915,4 @@ position = Vector2(53, 34)
 script = ExtResource("5_21xkr")
 
 [node name="Trophy" parent="." instance=ExtResource("6_21xkr")]
-position = Vector2(359, 531)
+position = Vector2(3440, 474)

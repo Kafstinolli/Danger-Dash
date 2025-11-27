@@ -1,9 +1,10 @@
 extends CharacterBody2D
 
 const SPEED := 300.0
-const JUMP_VELOCITY := -400.0
+const JUMP_VELOCITY := -600.0
 
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
+@onready var timer = $Timer
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -23,7 +24,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y += gravity * delta
 
 	# --- Saltar ---
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and (is_on_floor() or timer.time_left > 0.0):
 		velocity.y = JUMP_VELOCITY
 
 	# --- Animaciones ---
@@ -34,5 +35,11 @@ func _physics_process(delta: float) -> void:
 	else:
 		sprite_2d.animation = "Idle"
 
+	var was_on_floor = is_on_floor()
 	# --- Movimiento final ---
 	move_and_slide()
+	
+	var just_left_ledge = was_on_floor and not is_on_floor() and velocity.y >= 0
+	
+	if just_left_ledge:
+		timer.start()
