@@ -1,12 +1,17 @@
 extends Node2D
 
+@onready var points_label: Label = %PointsLabel
+@onready var life_label: Label = %LifeLabel
+
 var puntos = 0
-var vida = 3
+var vidas = 3
 
 func add_puntos():
 	puntos += 1
 	print(puntos)
+	points_label.text = "$ " + str(puntos)
 
 func add_life():
-	vida += 1
-	print(vida)
+	vidas += 1
+	print(vidas)
+	life_label.text = "<3  " + str(vidas)

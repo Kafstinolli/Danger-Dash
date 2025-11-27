@@ -5,9 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://b3ojwo80syd2" path="res://Assets/Spritesheets/spritesheet-tiles-default.png" id="3_kry3j"]
 [ext_resource type="PackedScene" uid="uid://7hhevnvy1j10" path="res://Scenes/character_body_2d.tscn" id="4_kry3j"]
 [ext_resource type="Script" uid="uid://46flnbeosuhq" path="res://Scenes/character_body_2d.gd" id="5_21xkr"]
-[ext_resource type="PackedScene" uid="uid://ds28mo3xqhpji" path="res://Scenes/Trophy.tscn" id="6_21xkr"]
 [ext_resource type="PackedScene" uid="uid://cn427cbblfcyr" path="res://Scenes/moneda.tscn" id="7_6bp64"]
 [ext_resource type="Script" uid="uid://de6djjkeqjqme" path="res://Scenes/game_manager.gd" id="8_344ge"]
+[ext_resource type="PackedScene" uid="uid://hel7h75twbdd" path="res://Scenes/trofeo.tscn" id="9_hptm8"]
 [ext_resource type="PackedScene" uid="uid://vb07lfrih5dr" path="res://Scenes/vida.tscn" id="9_ynf5e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_21xkr"]
@@ -8921,9 +8921,6 @@ script = ExtResource("5_21xkr")
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0
 
-[node name="Trophy" parent="." instance=ExtResource("6_21xkr")]
-position = Vector2(7617, 172)
-
 [node name="GameManager" type="Node2D" parent="."]
 unique_name_in_owner = true
 script = ExtResource("8_344ge")
@@ -9021,3 +9018,53 @@ position = Vector2(7574, 429)
 
 [node name="Moneda22" parent="Monedas" instance=ExtResource("7_6bp64")]
 position = Vector2(7813, 190)
+
+[node name="Trofeo" parent="." instance=ExtResource("9_hptm8")]
+position = Vector2(7605, 208)
+
+[node name="UI_puntos" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="UI_puntos"]
+offset_right = 74.0
+offset_bottom = 44.0
+
+[node name="PointsLabel" type="Label" parent="UI_puntos/Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 8.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "$ 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UI_vidas" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="UI_vidas"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.0
+offset_right = 53.0
+offset_bottom = 52.0
+grow_horizontal = 2
+
+[node name="LifeLabel" type="Label" parent="UI_vidas/Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "<3    3"
+horizontal_alignment = 1
+vertical_alignment = 1
