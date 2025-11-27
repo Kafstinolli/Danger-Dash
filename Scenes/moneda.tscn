@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://cn427cbblfcyr"]
+
+[ext_resource type="Texture2D" uid="uid://bdmb0feag4nm0" path="res://Assets/Sprites/Tiles/Default/coin_gold.png" id="1_j5x4i"]
+[ext_resource type="Script" uid="uid://bvms8vcouth00" path="res://Scenes/moneda.gd" id="1_wder7"]
+[ext_resource type="Texture2D" uid="uid://bet628fjdxs45" path="res://Assets/Sprites/Tiles/Default/coin_gold_side.png" id="2_wder7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yvb0b"]
+atlas = ExtResource("1_j5x4i")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jr0by"]
+atlas = ExtResource("2_wder7")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ayni2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yvb0b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jr0by")
+}],
+"loop": true,
+"name": &"Moneda",
+"speed": 5.0
+}]
+
+[node name="Moneda" type="Area2D"]
+script = ExtResource("1_wder7")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_ayni2")
+animation = &"Moneda"
+autoplay = "Moneda"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(-7, -24, -7, -22, -23, -10, -23, 11, -5.7, 24, 4.6, 24, 13.6, 18, 16.2, 18, 21.2, 9, 23, 9, 23, -7.7, 20, -11.7, 20, -14.2, 6, -22.2, 6, -24)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,58 @@
+[gd_scene load_steps=11 format=3 uid="uid://vb07lfrih5dr"]
+
+[ext_resource type="Script" uid="uid://dlo0gwbys1m48" path="res://Scenes/vida.gd" id="1_eknwg"]
+[ext_resource type="Texture2D" uid="uid://cw20raxkchk2x" path="res://Assets/Sprites/Tiles/Default/heart.png" id="1_o63nd"]
+[ext_resource type="Texture2D" uid="uid://idpgjoy80ge7" path="res://Assets/Sprites/Tiles/Default/hud_heart.png" id="2_eknwg"]
+[ext_resource type="Texture2D" uid="uid://cp1kbpds0cfr6" path="res://Assets/Sprites/Tiles/Default/hud_heart_half.png" id="3_aaaai"]
+[ext_resource type="Texture2D" uid="uid://bkb27vfh8fwkx" path="res://Assets/Sprites/Tiles/Default/hud_heart_empty.png" id="4_cjcqu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fcj54"]
+atlas = ExtResource("1_o63nd")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i32wg"]
+atlas = ExtResource("2_eknwg")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubejj"]
+atlas = ExtResource("3_aaaai")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m43c7"]
+atlas = ExtResource("4_cjcqu")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v6p7p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fcj54")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i32wg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ubejj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m43c7")
+}],
+"loop": true,
+"name": &"Vida",
+"speed": 5.0
+}]
+
+[node name="Vida" type="Area2D"]
+script = ExtResource("1_eknwg")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_v6p7p")
+animation = &"Vida"
+autoplay = "Vida"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(-13, -20.1, -13, -17.9, -22, -9.9, -22, 1.9, -4, 17.8, -4, 21, 3.5, 18, 5.9, 18, 19.9, 2, 22, 2, 22, -9.8, 15, -16.8, 15, -18.9)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

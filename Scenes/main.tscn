@@ -6,9 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://7hhevnvy1j10" path="res://Scenes/character_body_2d.tscn" id="4_kry3j"]
 [ext_resource type="Script" uid="uid://46flnbeosuhq" path="res://Scenes/character_body_2d.gd" id="5_21xkr"]
 [ext_resource type="PackedScene" uid="uid://ds28mo3xqhpji" path="res://Scenes/Trophy.tscn" id="6_21xkr"]
-[ext_resource type="PackedScene" uid="uid://vvqy1ml62nfo" path="res://Scenes/coleccionable_monedas.tscn" id="7_6bp64"]
-[ext_resource type="PackedScene" uid="uid://dxfe3tmibgjpy" path="res://Scenes/game_manager.tscn" id="8_344ge"]
-[ext_resource type="PackedScene" uid="uid://vvqy1ml62nfo" path="res://Scenes/coleccionable_vida.tscn" id="9_ynf5e"]
+[ext_resource type="PackedScene" uid="uid://cn427cbblfcyr" path="res://Scenes/moneda.tscn" id="7_6bp64"]
+[ext_resource type="Script" uid="uid://de6djjkeqjqme" path="res://Scenes/game_manager.gd" id="8_344ge"]
+[ext_resource type="PackedScene" uid="uid://vb07lfrih5dr" path="res://Scenes/vida.tscn" id="9_ynf5e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_21xkr"]
 texture = ExtResource("3_kry3j")
@@ -8924,100 +8924,100 @@ position_smoothing_speed = 7.0
 [node name="Trophy" parent="." instance=ExtResource("6_21xkr")]
 position = Vector2(7617, 172)
 
+[node name="GameManager" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("8_344ge")
+
+[node name="Vidas" type="Node" parent="."]
+
+[node name="Vida" parent="Vidas" instance=ExtResource("9_ynf5e")]
+position = Vector2(1514, 117)
+
+[node name="Vida2" parent="Vidas" instance=ExtResource("9_ynf5e")]
+position = Vector2(3170, 695)
+
+[node name="Vida3" parent="Vidas" instance=ExtResource("9_ynf5e")]
+position = Vector2(3408, 695)
+
+[node name="Vida4" parent="Vidas" instance=ExtResource("9_ynf5e")]
+position = Vector2(3932, 80)
+
+[node name="Vida5" parent="Vidas" instance=ExtResource("9_ynf5e")]
+position = Vector2(5132, 718)
+
+[node name="Vida6" parent="Vidas" instance=ExtResource("9_ynf5e")]
+position = Vector2(6484, 714)
+
+[node name="Vida7" parent="Vidas" instance=ExtResource("9_ynf5e")]
+position = Vector2(7377, 76)
+
 [node name="Monedas" type="Node" parent="."]
 
-[node name="Coleccionable" parent="Monedas" instance=ExtResource("7_6bp64")]
-position = Vector2(442, 363)
+[node name="Moneda" parent="Monedas" instance=ExtResource("7_6bp64")]
+position = Vector2(433, 352)
 
-[node name="Coleccionable2" parent="Monedas" instance=ExtResource("7_6bp64")]
-position = Vector2(721, 314)
+[node name="Moneda2" parent="Monedas" instance=ExtResource("7_6bp64")]
+position = Vector2(717, 309)
 
-[node name="Coleccionable3" parent="Monedas" instance=ExtResource("7_6bp64")]
-position = Vector2(1195, 769)
+[node name="Moneda3" parent="Monedas" instance=ExtResource("7_6bp64")]
+position = Vector2(591, 654)
 
-[node name="Coleccionable4" parent="Monedas" instance=ExtResource("7_6bp64")]
-position = Vector2(601, 625)
+[node name="Moneda4" parent="Monedas" instance=ExtResource("7_6bp64")]
+position = Vector2(1035, 800)
 
-[node name="Coleccionable5" parent="Monedas" instance=ExtResource("7_6bp64")]
-position = Vector2(1730, 652)
+[node name="Moneda5" parent="Monedas" instance=ExtResource("7_6bp64")]
+position = Vector2(1353, 739)
 
-[node name="Coleccionable6" parent="Monedas" instance=ExtResource("7_6bp64")]
-position = Vector2(2147, 654)
+[node name="Moneda6" parent="Monedas" instance=ExtResource("7_6bp64")]
+position = Vector2(1747, 694)
 
-[node name="Coleccionable7" parent="Monedas" instance=ExtResource("7_6bp64")]
-position = Vector2(2565, 659)
+[node name="Moneda7" parent="Monedas" instance=ExtResource("7_6bp64")]
+position = Vector2(2150, 698)
 
-[node name="Coleccionable8" parent="Monedas" instance=ExtResource("7_6bp64")]
-position = Vector2(3294, 460)
+[node name="Moneda8" parent="Monedas" instance=ExtResource("7_6bp64")]
+position = Vector2(2561, 698)
 
-[node name="Coleccionable9" parent="Monedas" instance=ExtResource("7_6bp64")]
-position = Vector2(3047, 455)
+[node name="Moneda9" parent="Monedas" instance=ExtResource("7_6bp64")]
+position = Vector2(3979, 632)
 
-[node name="Coleccionable10" parent="Monedas" instance=ExtResource("7_6bp64")]
-position = Vector2(3529, 462)
+[node name="Moneda10" parent="Monedas" instance=ExtResource("7_6bp64")]
+position = Vector2(4264, 544)
 
-[node name="Coleccionable11" parent="Monedas" instance=ExtResource("7_6bp64")]
-position = Vector2(4265, 550)
+[node name="Moneda11" parent="Monedas" instance=ExtResource("7_6bp64")]
+position = Vector2(4560, 465)
 
-[node name="Coleccionable12" parent="Monedas" instance=ExtResource("7_6bp64")]
-position = Vector2(4562, 481)
+[node name="Moneda12" parent="Monedas" instance=ExtResource("7_6bp64")]
+position = Vector2(4803, 263)
 
-[node name="Coleccionable13" parent="Monedas" instance=ExtResource("7_6bp64")]
-position = Vector2(4800, 239)
+[node name="Moneda13" parent="Monedas" instance=ExtResource("7_6bp64")]
+position = Vector2(4416, 218)
 
-[node name="Coleccionable14" parent="Monedas" instance=ExtResource("7_6bp64")]
-position = Vector2(4424, 205)
+[node name="Moneda14" parent="Monedas" instance=ExtResource("7_6bp64")]
+position = Vector2(4127, 199)
 
-[node name="Coleccionable15" parent="Monedas" instance=ExtResource("7_6bp64")]
-position = Vector2(4120, 219)
+[node name="Moneda15" parent="Monedas" instance=ExtResource("7_6bp64")]
+position = Vector2(5124, 255)
 
-[node name="Coleccionable16" parent="Monedas" instance=ExtResource("7_6bp64")]
-position = Vector2(5127, 228)
+[node name="Moneda16" parent="Monedas" instance=ExtResource("7_6bp64")]
+position = Vector2(5451, 258)
 
-[node name="Coleccionable17" parent="Monedas" instance=ExtResource("7_6bp64")]
-position = Vector2(5467, 231)
+[node name="Moneda17" parent="Monedas" instance=ExtResource("7_6bp64")]
+position = Vector2(5800, 262)
 
-[node name="Coleccionable18" parent="Monedas" instance=ExtResource("7_6bp64")]
-position = Vector2(5805, 232)
+[node name="Moneda18" parent="Monedas" instance=ExtResource("7_6bp64")]
+position = Vector2(6115, 262)
 
-[node name="Coleccionable19" parent="Monedas" instance=ExtResource("7_6bp64")]
-position = Vector2(6136, 227)
+[node name="Moneda19" parent="Monedas" instance=ExtResource("7_6bp64")]
+position = Vector2(6469, 255)
 
-[node name="Coleccionable20" parent="Monedas" instance=ExtResource("7_6bp64")]
-position = Vector2(6456, 235)
+[node name="Moneda20" parent="Monedas" instance=ExtResource("7_6bp64")]
+position = Vector2(7084, 748)
 
-[node name="Coleccionable21" parent="Monedas" instance=ExtResource("7_6bp64")]
-position = Vector2(6867, 328)
+[node name="Moneda21" parent="Monedas" instance=ExtResource("7_6bp64")]
+position = Vector2(6867, 304)
 
-[node name="Coleccionable22" parent="Monedas" instance=ExtResource("7_6bp64")]
-position = Vector2(7053, 752)
+[node name="Moneda23" parent="Monedas" instance=ExtResource("7_6bp64")]
+position = Vector2(7574, 429)
 
-[node name="Coleccionable23" parent="Monedas" instance=ExtResource("7_6bp64")]
-position = Vector2(7802, 169)
-
-[node name="Coleccionable24" parent="Monedas" instance=ExtResource("7_6bp64")]
-position = Vector2(7578, 438)
-
-[node name="GameManager" parent="." instance=ExtResource("8_344ge")]
-unique_name_in_owner = true
-
-[node name="Area2D" parent="." instance=ExtResource("9_ynf5e")]
-position = Vector2(1512, 120)
-
-[node name="Area2D2" parent="." instance=ExtResource("9_ynf5e")]
-position = Vector2(3163, 702)
-
-[node name="Area2D3" parent="." instance=ExtResource("9_ynf5e")]
-position = Vector2(3411, 702)
-
-[node name="Area2D4" parent="." instance=ExtResource("9_ynf5e")]
-position = Vector2(3934, 84)
-
-[node name="Area2D5" parent="." instance=ExtResource("9_ynf5e")]
-position = Vector2(5134, 719)
-
-[node name="Area2D6" parent="." instance=ExtResource("9_ynf5e")]
-position = Vector2(6485, 716)
-
-[node name="Area2D7" parent="." instance=ExtResource("9_ynf5e")]
-position = Vector2(7147, 96)
+[node name="Moneda22" parent="Monedas" instance=ExtResource("7_6bp64")]
+position = Vector2(7813, 190)
