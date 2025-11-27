@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bxf718sm7occc"]
+[gd_scene load_steps=10 format=3 uid="uid://bxf718sm7occc"]
 
 [ext_resource type="Texture2D" uid="uid://dro11dghauxvf" path="res://Assets/Sprites/Backgrounds/Double/background_clouds.png" id="1_8gbba"]
 [ext_resource type="Texture2D" uid="uid://bm64uurovuo31" path="res://Assets/Sprites/Backgrounds/Double/background_fade_mushrooms.png" id="2_jjvhh"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://7hhevnvy1j10" path="res://Scenes/character_body_2d.tscn" id="4_kry3j"]
 [ext_resource type="Script" uid="uid://46flnbeosuhq" path="res://Scenes/character_body_2d.gd" id="5_21xkr"]
 [ext_resource type="PackedScene" uid="uid://ds28mo3xqhpji" path="res://Scenes/Trophy.tscn" id="6_21xkr"]
+[ext_resource type="PackedScene" uid="uid://vvqy1ml62nfo" path="res://Scenes/coleccionable.tscn" id="7_6bp64"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_21xkr"]
 texture = ExtResource("3_kry3j")
@@ -8920,3 +8921,24 @@ position_smoothing_speed = 7.0
 
 [node name="Trophy" parent="." instance=ExtResource("6_21xkr")]
 position = Vector2(3440, 474)
+
+[node name="Coleccionable" parent="." instance=ExtResource("7_6bp64")]
+position = Vector2(411, 306)
+
+[node name="Coleccionable2" parent="." instance=ExtResource("7_6bp64")]
+position = Vector2(719, 307)
+
+[node name="Coleccionable3" parent="." instance=ExtResource("7_6bp64")]
+position = Vector2(1195, 814)
+
+[node name="Coleccionable4" parent="." instance=ExtResource("7_6bp64")]
+position = Vector2(599, 649)
+
+[node name="Coleccionable5" parent="." instance=ExtResource("7_6bp64")]
+position = Vector2(1204, 131)
+
+[node name="Coleccionable6" parent="." instance=ExtResource("7_6bp64")]
+position = Vector2(1503, 140)
+
+[node name="Coleccionable7" parent="." instance=ExtResource("7_6bp64")]
+position = Vector2(1905, 162)
