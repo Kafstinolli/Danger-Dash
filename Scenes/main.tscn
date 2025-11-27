@@ -8914,5 +8914,9 @@ layer_0/tile_data = PackedInt32Array(-4, 1310721, 12, 65532, 1310721, 13, 131068
 position = Vector2(53, 34)
 script = ExtResource("5_21xkr")
 
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0
+
 [node name="Trophy" parent="." instance=ExtResource("6_21xkr")]
 position = Vector2(3440, 474)
