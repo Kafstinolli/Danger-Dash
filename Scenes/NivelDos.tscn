@@ -9001,16 +9001,130 @@ layer_0/tile_data = PackedInt32Array(2621436, 1703937, 52, 2686972, 1703937, 53,
 [node name="Vida" parent="ScenesObjects/Vidas" instance=ExtResource("4_w7jka")]
 position = Vector2(958, 193)
 
-[node name="Moneda" parent="ScenesObjects/Vidas" instance=ExtResource("5_qnv6m")]
-position = Vector2(208, 154)
+[node name="Vida2" parent="ScenesObjects/Vidas" instance=ExtResource("4_w7jka")]
+position = Vector2(3556, 406)
 
-[node name="Moneda2" parent="ScenesObjects/Vidas" instance=ExtResource("5_qnv6m")]
-position = Vector2(206, 221)
-
-[node name="Moneda3" parent="ScenesObjects/Vidas" instance=ExtResource("5_qnv6m")]
-position = Vector2(204, 293)
+[node name="Vida3" parent="ScenesObjects/Vidas" instance=ExtResource("4_w7jka")]
+position = Vector2(12086, 376)
 
 [node name="Monedas" type="Node" parent="ScenesObjects"]
+
+[node name="Moneda" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(208, 154)
+
+[node name="Moneda2" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(206, 221)
+
+[node name="Moneda3" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(204, 293)
+
+[node name="Moneda4" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(204, 365)
+
+[node name="Moneda5" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(1810, 427)
+
+[node name="Moneda6" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(1906, 425)
+
+[node name="Moneda7" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(1998, 427)
+
+[node name="Moneda8" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(2096, 430)
+
+[node name="Moneda9" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(2194, 430)
+
+[node name="Moneda10" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(4543, 134)
+
+[node name="Moneda11" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(4631, 239)
+
+[node name="Moneda12" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(4446, 242)
+
+[node name="Moneda13" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(4340, 333)
+
+[node name="Moneda14" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(4737, 342)
+
+[node name="Moneda15" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(5695, 145)
+
+[node name="Moneda16" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(5596, 236)
+
+[node name="Moneda17" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(5499, 342)
+
+[node name="Moneda18" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(5878, 348)
+
+[node name="Moneda19" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(5787, 236)
+
+[node name="Moneda20" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(6876, 179)
+
+[node name="Moneda21" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(6973, 179)
+
+[node name="Moneda22" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(9702, 790)
+
+[node name="Moneda23" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(10103, 559)
+
+[node name="Moneda24" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(10300, 565)
+
+[node name="Moneda25" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(10588, 567)
+
+[node name="Moneda26" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(10779, 576)
+
+[node name="Moneda27" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(10497, 268)
+
+[node name="Moneda28" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(10868, 268)
+
+[node name="Moneda29" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(11065, 579)
+
+[node name="Moneda30" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(11247, 576)
+
+[node name="Moneda31" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(12103, 462)
+
+[node name="Moneda32" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(12026, 448)
+
+[node name="Moneda33" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(11980, 408)
+
+[node name="Moneda34" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(11989, 339)
+
+[node name="Moneda35" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(12057, 288)
+
+[node name="Moneda36" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(12171, 433)
+
+[node name="Moneda37" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(12209, 376)
+
+[node name="Moneda38" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(12177, 322)
+
+[node name="Moneda39" parent="ScenesObjects/Monedas" instance=ExtResource("5_qnv6m")]
+position = Vector2(12132, 288)
 
 [node name="CharacterBody2D" parent="ScenesObjects" instance=ExtResource("6_jrom0")]
 position = Vector2(474, 542)
@@ -9025,120 +9139,6 @@ drag_horizontal_offset = 1.0
 
 [node name="CamTimer" type="Timer" parent="ScenesObjects/CharacterBody2D"]
 wait_time = 0.1
-
-[node name="Moneda" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(204, 365)
-
-[node name="Moneda2" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(1810, 427)
-
-[node name="Moneda3" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(1906, 425)
-
-[node name="Moneda4" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(1998, 427)
-
-[node name="Moneda5" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(2096, 430)
-
-[node name="Moneda6" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(2194, 430)
-
-[node name="Vida" parent="ScenesObjects" instance=ExtResource("4_w7jka")]
-position = Vector2(3556, 406)
-
-[node name="Moneda7" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(4543, 134)
-
-[node name="Moneda8" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(4631, 239)
-
-[node name="Moneda9" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(4446, 242)
-
-[node name="Moneda10" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(4340, 333)
-
-[node name="Moneda11" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(4737, 342)
-
-[node name="Moneda12" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(5695, 145)
-
-[node name="Moneda13" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(5596, 236)
-
-[node name="Moneda14" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(5499, 342)
-
-[node name="Moneda15" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(5878, 348)
-
-[node name="Moneda16" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(5787, 236)
-
-[node name="Moneda17" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(6876, 179)
-
-[node name="Moneda18" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(6973, 179)
-
-[node name="Moneda19" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(9702, 790)
-
-[node name="Moneda20" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(10103, 559)
-
-[node name="Moneda21" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(10300, 565)
-
-[node name="Moneda22" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(10588, 567)
-
-[node name="Moneda23" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(10779, 576)
-
-[node name="Moneda24" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(10497, 268)
-
-[node name="Moneda25" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(10868, 268)
-
-[node name="Moneda26" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(11065, 579)
-
-[node name="Moneda27" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(11247, 576)
-
-[node name="Moneda28" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(12103, 462)
-
-[node name="Moneda29" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(12026, 448)
-
-[node name="Moneda30" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(11980, 408)
-
-[node name="Moneda31" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(11989, 339)
-
-[node name="Moneda32" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(12057, 288)
-
-[node name="Moneda33" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(12171, 433)
-
-[node name="Moneda34" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(12209, 376)
-
-[node name="Moneda35" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(12177, 322)
-
-[node name="Moneda36" parent="ScenesObjects" instance=ExtResource("5_qnv6m")]
-position = Vector2(12132, 288)
-
-[node name="Vida2" parent="ScenesObjects" instance=ExtResource("4_w7jka")]
-position = Vector2(12086, 376)
 
 [node name="GameManager" type="Node2D" parent="."]
 unique_name_in_owner = true
