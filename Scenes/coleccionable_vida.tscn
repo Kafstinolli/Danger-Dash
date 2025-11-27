@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=3 uid="uid://vvqy1ml62nfo"]
+
+[ext_resource type="Texture2D" uid="uid://cw20raxkchk2x" path="res://Assets/Sprites/Tiles/Default/heart.png" id="1_08482"]
+[ext_resource type="Texture2D" uid="uid://idpgjoy80ge7" path="res://Assets/Sprites/Tiles/Default/hud_heart.png" id="2_tffna"]
+[ext_resource type="Texture2D" uid="uid://cp1kbpds0cfr6" path="res://Assets/Sprites/Tiles/Default/hud_heart_half.png" id="3_kwnot"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tcgc"]
+atlas = ExtResource("1_08482")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bf4hg"]
+atlas = ExtResource("2_tffna")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipcbu"]
+atlas = ExtResource("3_kwnot")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecmcx"]
+atlas = ExtResource("3_kwnot")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jig81"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1tcgc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bf4hg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipcbu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ecmcx")
+}],
+"loop": true,
+"name": &"Health",
+"speed": 5.0
+}]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_jig81")
+animation = &"Health"
+autoplay = "Health"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(-13, -20.1, -13, -17.9, -22, -9.9, -22, 0.900002, -4, 17.9, -4, 21, 3.5, 18, 5.9, 18, 19.9, 2, 22, 2, 22, -9.8, 15, -16.8, 15, -18.9)
