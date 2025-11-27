@@ -6,13 +6,13 @@
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(2, 0)
 scale = Vector2(1.60803, 2.16699)
 texture = ExtResource("1_jflle")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 visible = false
 position = Vector2(2, 0)
 scale = Vector2(1.60803, 2.16699)
