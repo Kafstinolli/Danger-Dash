@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://vvqy1ml62nfo"]
+[gd_scene load_steps=7 format=3 uid="uid://vvqy1ml62nfo"]
 
 [ext_resource type="Texture2D" uid="uid://bdmb0feag4nm0" path="res://Assets/Sprites/Tiles/Default/coin_gold.png" id="1_47kj8"]
+[ext_resource type="Script" uid="uid://dwsph3l4k2qtp" path="res://Scenes/coleccionable.gd" id="1_85h40"]
 [ext_resource type="Texture2D" uid="uid://bet628fjdxs45" path="res://Assets/Sprites/Tiles/Default/coin_gold_side.png" id="2_85h40"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hptm8"]
@@ -26,6 +27,7 @@ animations = [{
 }]
 
 [node name="Coleccionable" type="Area2D"]
+script = ExtResource("1_85h40")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -38,3 +40,5 @@ autoplay = "Moneda"
 visible = false
 position = Vector2(1, -3)
 polygon = PackedVector2Array(-6, -24.7, -6, -22.1, -19.7, -13, -22, -13, -22, 12.1, -4.6, 24, 4.6, 24, 14.5, 17, 17.2, 17, 21.2, 9, 23.1, 9, 22, -7.1, 22, -10.9, 15, -16.9, 15, -18.5)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
