@@ -1,0 +1,200 @@
+[gd_scene load_steps=21 format=3 uid="uid://b4vqqbvlxirww"]
+
+[ext_resource type="Texture2D" uid="uid://bdmb0feag4nm0" path="res://Assets/Sprites/Tiles/Default/coin_gold.png" id="1_klvyb"]
+[ext_resource type="Texture2D" uid="uid://bet628fjdxs45" path="res://Assets/Sprites/Tiles/Default/coin_gold_side.png" id="2_xbfk3"]
+[ext_resource type="Texture2D" uid="uid://dwadcin7hxbfp" path="res://Assets/ProgressBar/FrameCharacter back.png" id="3_he028"]
+[ext_resource type="Texture2D" uid="uid://b1n3a4ra2nqo3" path="res://Assets/ProgressBar/hud_player_helmet_purple.png" id="4_hehif"]
+[ext_resource type="Texture2D" uid="uid://cm4oe470qmepm" path="res://Assets/ProgressBar/FrameCharacter front.png" id="5_34gbl"]
+[ext_resource type="Texture2D" uid="uid://dl3rlgro307tn" path="res://Assets/ProgressBar/Marco.png" id="6_1semy"]
+[ext_resource type="Texture2D" uid="uid://c4tfnhaj4o8hq" path="res://Assets/ProgressBar/Gradient.png" id="7_u4yl6"]
+[ext_resource type="Texture2D" uid="uid://dh1d3nw73ednb" path="res://Assets/Sprites/Tiles/Default/spring.png" id="8_700l6"]
+[ext_resource type="Texture2D" uid="uid://cqjsmiktfwwpo" path="res://Assets/Sprites/Tiles/Default/spring_out.png" id="9_jjes2"]
+[ext_resource type="Texture2D" uid="uid://cw20raxkchk2x" path="res://Assets/Sprites/Tiles/Default/heart.png" id="10_il11j"]
+[ext_resource type="Texture2D" uid="uid://idpgjoy80ge7" path="res://Assets/Sprites/Tiles/Default/hud_heart.png" id="11_vr0tw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdnlq"]
+atlas = ExtResource("1_klvyb")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkdf5"]
+atlas = ExtResource("2_xbfk3")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wsu2k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdnlq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkdf5")
+}],
+"loop": true,
+"name": &"Moneda",
+"speed": 3.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ee4r6"]
+atlas = ExtResource("8_700l6")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gt3je"]
+atlas = ExtResource("9_jjes2")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3pmx8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ee4r6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gt3je")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 3.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fevyy"]
+atlas = ExtResource("10_il11j")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hibaj"]
+atlas = ExtResource("11_vr0tw")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gt3je"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fevyy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hibaj")
+}],
+"loop": true,
+"name": &"Vida",
+"speed": 3.0
+}]
+
+[node name="UI_puntos" type="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -74.0
+offset_bottom = 44.0
+grow_horizontal = 0
+
+[node name="PointsLabel" type="Label" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -2.0
+offset_right = 7.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "    0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panel"]
+position = Vector2(20, 24)
+scale = Vector2(0.953125, 0.921875)
+sprite_frames = SubResource("SpriteFrames_wsu2k")
+animation = &"Moneda"
+autoplay = "Moneda"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 88.0
+offset_bottom = 102.0
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+layout_mode = 1
+offset_right = 124.0
+offset_bottom = 128.0
+texture = ExtResource("3_he028")
+expand_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureRect"]
+texture_filter = 1
+position = Vector2(59, 71)
+scale = Vector2(1.77392, 1.70605)
+texture = ExtResource("4_hehif")
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect"]
+layout_mode = 1
+offset_right = 125.0
+offset_bottom = 129.0
+texture = ExtResource("5_34gbl")
+expand_mode = 1
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="TextureRect"]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 111.0
+offset_top = -18.0
+offset_right = 361.0
+offset_bottom = 107.0
+max_value = 23.0
+value = 2.0
+texture_over = ExtResource("6_1semy")
+texture_progress = ExtResource("7_u4yl6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(32, 615)
+sprite_frames = SubResource("SpriteFrames_3pmx8")
+animation = &"Jump"
+autoplay = "Jump"
+
+[node name="JumpLabel" type="Label" parent="AnimatedSprite2D"]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.898
+anchor_bottom = 1.0
+offset_left = 37.0
+offset_top = -71.0
+offset_right = -49.472
+offset_bottom = -29.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.0
+offset_right = 53.0
+offset_bottom = 52.0
+grow_horizontal = 2
+
+[node name="LifeLabel" type="Label" parent="Panel2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "    3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panel2"]
+position = Vector2(33, 28)
+sprite_frames = SubResource("SpriteFrames_gt3je")
+animation = &"Vida"
+autoplay = "Vida"
