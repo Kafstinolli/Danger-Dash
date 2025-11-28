@@ -24,5 +24,4 @@ func _on_timer_timeout() -> void:
 		add_child(new_coin)
 		current_coin = new_coin
 
-		# IMPORTANTE: La moneda debe emitir la señal "collected"
 		new_coin.connect("collected", Callable(self, "_on_coin_collected"))

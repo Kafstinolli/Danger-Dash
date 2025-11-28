@@ -1,0 +1,70 @@
+[gd_scene load_steps=12 format=3 uid="uid://dw1sa8cctt8vb"]
+
+[ext_resource type="Script" uid="uid://drecq4uxcu1ev" path="res://Scenes/EnemySlimeFire.gd" id="1_12k2m"]
+[ext_resource type="Texture2D" uid="uid://bfw8dhp1pomqw" path="res://Assets/Sprites/Enemies/Default/slime_fire_rest.png" id="2_qmtg1"]
+[ext_resource type="Texture2D" uid="uid://dqcdcqsqmxuix" path="res://Assets/Sprites/Enemies/Default/slime_fire_flat.png" id="3_fxfkw"]
+[ext_resource type="Texture2D" uid="uid://cf8eimrw7saeu" path="res://Assets/Sprites/Enemies/Default/slime_fire_walk_a.png" id="4_x4wo5"]
+[ext_resource type="Texture2D" uid="uid://cegbkphsgbx0d" path="res://Assets/Sprites/Enemies/Default/slime_fire_walk_b.png" id="5_y41l6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jy3x1"]
+atlas = ExtResource("2_qmtg1")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wg711"]
+atlas = ExtResource("3_fxfkw")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_erdvf"]
+atlas = ExtResource("4_x4wo5")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvd0t"]
+atlas = ExtResource("5_y41l6")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_883ib"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jy3x1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wg711")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_erdvf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvd0t")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dofgj"]
+radius = 28.0179
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_12k2m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_883ib")
+animation = &"Run"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 8)
+shape = SubResource("CircleShape2D_dofgj")
+
+[node name="Left" type="RayCast2D" parent="."]
+target_position = Vector2(-50, 0)
+collision_mask = 4
+
+[node name="Right" type="RayCast2D" parent="."]
+target_position = Vector2(63, 0)
