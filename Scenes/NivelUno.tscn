@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bxf718sm7occc"]
+[gd_scene load_steps=33 format=3 uid="uid://bxf718sm7occc"]
 
 [ext_resource type="Texture2D" uid="uid://dro11dghauxvf" path="res://Assets/Sprites/Backgrounds/Double/background_clouds.png" id="1_okpvs"]
 [ext_resource type="Texture2D" uid="uid://bm64uurovuo31" path="res://Assets/Sprites/Backgrounds/Double/background_fade_mushrooms.png" id="2_v28pm"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://de6djjkeqjqme" path="res://Scenes/game_manager.gd" id="8_g2ko6"]
 [ext_resource type="PackedScene" uid="uid://hel7h75twbdd" path="res://Scenes/trofeo.tscn" id="9_8jupp"]
 [ext_resource type="Texture2D" uid="uid://bdmb0feag4nm0" path="res://Assets/Sprites/Tiles/Default/coin_gold.png" id="10_sghku"]
+[ext_resource type="PackedScene" uid="uid://dgwpnekkq1qaf" path="res://Scenes/NivelDos.tscn" id="10_v28pm"]
 [ext_resource type="Texture2D" uid="uid://bet628fjdxs45" path="res://Assets/Sprites/Tiles/Default/coin_gold_side.png" id="11_yt7nt"]
 [ext_resource type="Texture2D" uid="uid://dwadcin7hxbfp" path="res://Assets/ProgressBar/FrameCharacter back.png" id="12_ye87q"]
 [ext_resource type="Texture2D" uid="uid://b1n3a4ra2nqo3" path="res://Assets/ProgressBar/hud_player_helmet_purple.png" id="13_abskw"]
@@ -9107,6 +9108,7 @@ script = ExtResource("8_g2ko6")
 
 [node name="Trofeo" parent="." instance=ExtResource("9_8jupp")]
 position = Vector2(7605, 208)
+target_level = ExtResource("10_v28pm")
 
 [node name="UI_puntos" type="CanvasLayer" parent="."]
 
