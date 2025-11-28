@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b4vqqbvlxirww"]
+[gd_scene load_steps=27 format=3 uid="uid://b4vqqbvlxirww"]
 
 [ext_resource type="Texture2D" uid="uid://bdmb0feag4nm0" path="res://Assets/Sprites/Tiles/Default/coin_gold.png" id="1_klvyb"]
 [ext_resource type="Texture2D" uid="uid://bet628fjdxs45" path="res://Assets/Sprites/Tiles/Default/coin_gold_side.png" id="2_xbfk3"]
@@ -11,6 +11,12 @@
 [ext_resource type="Texture2D" uid="uid://cqjsmiktfwwpo" path="res://Assets/Sprites/Tiles/Default/spring_out.png" id="9_jjes2"]
 [ext_resource type="Texture2D" uid="uid://cw20raxkchk2x" path="res://Assets/Sprites/Tiles/Default/heart.png" id="10_il11j"]
 [ext_resource type="Texture2D" uid="uid://idpgjoy80ge7" path="res://Assets/Sprites/Tiles/Default/hud_heart.png" id="11_vr0tw"]
+[ext_resource type="AudioStream" uid="uid://bd66qygxbfwl5" path="res://Assets/Sounds/fondo.mp3" id="12_u4yl6"]
+[ext_resource type="AudioStream" uid="uid://drsxbv34pdxmu" path="res://Assets/Sounds/sfx_coin.ogg" id="13_700l6"]
+[ext_resource type="AudioStream" uid="uid://r6a0gmsloedj" path="res://Assets/Sounds/sfx_gem.ogg" id="14_jjes2"]
+[ext_resource type="AudioStream" uid="uid://rl4lx4rrsm6e" path="res://Assets/Sounds/sfx_magic.ogg" id="15_il11j"]
+[ext_resource type="AudioStream" uid="uid://cuvbeaq5t3uid" path="res://Assets/Sounds/sfx_disappear.ogg" id="16_vr0tw"]
+[ext_resource type="AudioStream" uid="uid://drtp5ct7hn7jp" path="res://Assets/Sounds/sfx_jump.ogg" id="17_f4sux"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fdnlq"]
 atlas = ExtResource("1_klvyb")
@@ -198,3 +204,22 @@ position = Vector2(33, 28)
 sprite_frames = SubResource("SpriteFrames_gt3je")
 animation = &"Vida"
 autoplay = "Vida"
+
+[node name="GameAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_u4yl6")
+autoplay = true
+
+[node name="CoinAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_700l6")
+
+[node name="LifeAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_jjes2")
+
+[node name="TrophyAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_il11j")
+
+[node name="EnemiesAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_vr0tw")
+
+[node name="JumpAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_f4sux")
