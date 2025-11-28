@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Danger Dash"
-run/main_scene="uid://bxf718sm7occc"
+run/main_scene="uid://b111f7f3csffu"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
