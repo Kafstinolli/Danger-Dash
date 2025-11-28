@@ -17,6 +17,9 @@ var conta = 0
 var maxim = 80
 var steps = 160
 
+func _ready() -> void:
+	jump_label = get_node("/root/UiPuntos/AnimatedSprite2D/JumpLabel")
+
 func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("Recorrido"):
@@ -43,7 +46,6 @@ func _physics_process(delta: float) -> void:
 	# Gravedad
 	if not is_on_floor():
 		velocity.y += gravity * delta
-
 	
 	# Saltar
 	if Input.is_action_just_pressed("jump") and (is_on_floor() or timer.time_left > 0.0):
@@ -86,3 +88,4 @@ func _on_cam_timer_timeout() -> void:
 			if conta >= maxim:
 				cam_timer.stop()
 				cam.drag_horizontal_enabled = true
+				
