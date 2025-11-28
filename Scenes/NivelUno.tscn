@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bxf718sm7occc"]
+[gd_scene load_steps=14 format=3 uid="uid://bxf718sm7occc"]
 
 [ext_resource type="Texture2D" uid="uid://dro11dghauxvf" path="res://Assets/Sprites/Backgrounds/Double/background_clouds.png" id="1_okpvs"]
 [ext_resource type="Texture2D" uid="uid://bm64uurovuo31" path="res://Assets/Sprites/Backgrounds/Double/background_fade_mushrooms.png" id="2_v28pm"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://de6djjkeqjqme" path="res://Scenes/game_manager.gd" id="8_g2ko6"]
 [ext_resource type="PackedScene" uid="uid://hel7h75twbdd" path="res://Scenes/trofeo.tscn" id="9_8jupp"]
 [ext_resource type="PackedScene" uid="uid://dgwpnekkq1qaf" path="res://Scenes/NivelDos.tscn" id="10_v28pm"]
+[ext_resource type="Script" uid="uid://dj80613smpwye" path="res://Scenes/spawner.gd" id="11_qoffr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_21xkr"]
 texture = ExtResource("3_6lux0")
@@ -8944,10 +8945,10 @@ position = Vector2(7377, 76)
 [node name="Monedas" type="Node" parent="ScenesObjects"]
 
 [node name="Moneda" parent="ScenesObjects/Monedas" instance=ExtResource("5_nn03a")]
-position = Vector2(433, 352)
+position = Vector2(1817, 147)
 
 [node name="Moneda2" parent="ScenesObjects/Monedas" instance=ExtResource("5_nn03a")]
-position = Vector2(717, 309)
+position = Vector2(1259, 135)
 
 [node name="Moneda3" parent="ScenesObjects/Monedas" instance=ExtResource("5_nn03a")]
 position = Vector2(591, 654)
@@ -9033,4 +9034,22 @@ script = ExtResource("8_g2ko6")
 position = Vector2(7605, 208)
 target_level = ExtResource("10_v28pm")
 
+[node name="Spawner" type="Node2D" parent="."]
+position = Vector2(433, 336)
+script = ExtResource("11_qoffr")
+
+[node name="Timer" type="Timer" parent="Spawner"]
+wait_time = 2.0
+autostart = true
+
+[node name="Spawner2" type="Node2D" parent="."]
+position = Vector2(719, 284)
+script = ExtResource("11_qoffr")
+
+[node name="Timer" type="Timer" parent="Spawner2"]
+wait_time = 2.0
+autostart = true
+
 [connection signal="timeout" from="ScenesObjects/CharacterBody2D/CamTimer" to="ScenesObjects/CharacterBody2D" method="_on_cam_timer_timeout"]
+[connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="Spawner2/Timer" to="Spawner2" method="_on_timer_timeout"]

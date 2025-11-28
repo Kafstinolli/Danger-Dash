@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dgwpnekkq1qaf"]
+[gd_scene load_steps=14 format=3 uid="uid://dgwpnekkq1qaf"]
 
 [ext_resource type="Texture2D" uid="uid://dro11dghauxvf" path="res://Assets/Sprites/Backgrounds/Double/background_clouds.png" id="1_cq1tc"]
 [ext_resource type="Texture2D" uid="uid://ddjvwm7j47ba3" path="res://Assets/Sprites/Backgrounds/Double/background_color_desert.png" id="2_2petr"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://de6djjkeqjqme" path="res://Scenes/game_manager.gd" id="8_5av1g"]
 [ext_resource type="PackedScene" uid="uid://hel7h75twbdd" path="res://Scenes/trofeo.tscn" id="9_hthso"]
 [ext_resource type="PackedScene" uid="uid://b111f7f3csffu" path="res://Scenes/Menu.tscn" id="10_8wo27"]
+[ext_resource type="Script" uid="uid://b445mlqriinvn" path="res://Scenes/spawner2.gd" id="11_mnx5q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_21xkr"]
 texture = ExtResource("3_6xcnr")
@@ -9072,4 +9073,13 @@ script = ExtResource("8_5av1g")
 position = Vector2(10702, 162)
 target_level = ExtResource("10_8wo27")
 
+[node name="Spawner" type="Node2D" parent="."]
+position = Vector2(959, 733)
+script = ExtResource("11_mnx5q")
+
+[node name="Timer" type="Timer" parent="Spawner"]
+wait_time = 2.0
+autostart = true
+
 [connection signal="timeout" from="ScenesObjects/CharacterBody2D/CamTimer" to="ScenesObjects/CharacterBody2D" method="_on_cam_timer_timeout"]
+[connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]
