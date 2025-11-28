@@ -16,9 +16,12 @@ var itera = 0
 var conta = 0
 var maxim = 80
 var steps = 160
+var jump_sound
 
-func _ready() -> void:
+
+func _ready():
 	jump_label = get_node("/root/UiPuntos/AnimatedSprite2D/JumpLabel")
+	jump_sound = get_node("/root/UiPuntos/JumpAudio")
 
 func _physics_process(delta: float) -> void:
 	
@@ -51,6 +54,9 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump") and (is_on_floor() or timer.time_left > 0.0):
 		velocity.y = JUMP_VELOCITY
 		jump_label.text = str(int(jump_label.text) + 1 )
+		jump_sound.playing = true
+		
+
 	# Animaciones
 	if not is_on_floor():
 		sprite_2d.animation = "Jump"
